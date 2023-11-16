@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <header>
+        <h1>Home Admin</h1>   
+        <nav>
+            <div class="navbar">
+                <span class="username">Rodri Admin</span>
+                <a class="logout-button" href="index.html">Logout</a>
+            </div>
+        </nav>
+    </header>
+    <form>
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name"><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br>
+        <label for="phone">Número:</label>
+        <input type="tel" id="phone" name="phone"><br>
+        <button class="boton" type="submit">Agregar profesional</button>
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Email</th>
+                <th>Número</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Juan Doe</td>
+                <td>juandoe@example.com</td>
+                <td>123-456-7890</td>
+                <td>
+                    <button onclick="editRow(this)">Editar</button>
+                    <button onclick="deleteRow(this)">Borrar</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Javier Smith</td>
+                <td>javiSmith@example.com</td>
+                <td>555-555-5555</td>
+                <td>
+                    <button onclick="editRow(this)">Editar</button>
+                    <button onclick="deleteRow(this)">Borrar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <footer>
+        <p>Centro Educativo de Acompañantes</p>
+    </footer>
+    <script>
+        function editRow(button) {
+            var row = button.parentNode.parentNode;
+            
+            var cells = row.getElementsByTagName("td");
+            
+            var name = cells[0].innerHTML;
+            var email = cells[1].innerHTML;
+            var phone = cells[2].innerHTML;
+            
+            document.getElementById("name").value = name;
+            document.getElementById("email").value = email;
+            document.getElementById("phone").value = phone;
+        }
+        
+        function deleteRow(button) {
+            var row = button.parentNode.parentNode;
+            
+            row.parentNode.removeChild(row);
+        }
+    </script>
+</body>
+
+</html>
+    
+</body>
+</html>

@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+}
+
+.username{
+    color: #fff;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-right: 20px;
+    padding: 10px 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+nav a:hover {
+    background-color: #063970;
+    color: rgb(255, 228, 228);
+}
+
+nav li:hover {
+    background-color: #e8e8e8;
+}
+
+#chat {
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#messages {
+    height: 300px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    padding: 10px;
+    overflow-y: scroll;
+}
+
+#message-form input {
+    width: 75%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#message-form button {
+    width: 20%;
+    padding: 10px;
+    border: none;
+    color: white;
+    background-color: #007bff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#message-form button:hover {
+    background-color: #0056b3;
+}
+
+#profile {
+    width: 60%;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#profile-form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#profile-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+#profile-form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    color: white;
+    background-color: #007bff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#profile-form button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    background-color:#007bff;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+/*  mobile */
+@media (max-width: 768px) {
+    #chat {
+        width: 90%;
+    }
+
+    #message-form input {
+        width: 60%;
+    }
+
+    #message-form button {
+        width: 30%;
+    }
+
+    #profile {
+        width: 90%;
+    }
+
+    #profile-form input {
+        width: 100%;
+    }
+
+    #profile-form button {
+        width: 100%;
+    }
+}

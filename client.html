@@ -1,0 +1,83 @@
+<!-- FILEPATH: /c:/Users/USER/OneDrive/Documentos/UADE/1er año/DyDweb/Segundo Parcial/client.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Cliente</title>
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/Client.css">
+</head>
+<body> 
+    <header>
+        <h1>Home Cliente</h1>   
+        <nav>
+            <div class="navbar">
+                <span class="username">Rodri Cliente</span>
+                <a class="logout-button" href="index.html">Logout</a>
+            </div>
+        </nav>
+    </header>
+    <div class="section">
+        <h2>Profesionales disponibles</h2>
+        <ul class="professional-list">
+            <li>
+                <div class="contact-card">
+                    <h3>Juan Doe</h3>
+                    <p>Años de experiencia: 5</p>
+                    <p>Puntuación: <span class="rating">4.5</span></p>
+                    <p class="value-per-hour">Valor por hora: $2000</p>
+                    <button class="contact-button" onclick="showNumber('123-456-7890', this)">Contact</button>
+                    <span class="phone-number"></span>
+                </div>
+            </li>
+            <li>
+                <div class="contact-card">
+                    <h3>Javier Smith</h3>
+                    <p>Años de experiencia: 10</p>
+                    <p>Puntuación: <span class="rating">4.8</span></p>
+                    <p class="value-per-hour">Valor por hora: $4000</p>
+                    <button class="contact-button" onclick="showNumber('555-555-5555', this)">Contact</button>
+                    <span class="phone-number"></span>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="section">
+        <h2>Contactos realizados</h2>
+        <div class="section">
+            <h2>Chat</h2>
+                <div class="chat-container">
+                    <div class="message">
+                        <p class="sender">Juan Doe</p>
+                        <p class="text">Hola, como puedo ayudarte hoy?</p>
+                        <p class="timestamp">10:30 AM</p>
+                                </div>
+                                <div class="message">
+                                    <p class="sender">RodriClient</p>
+                                    <p class="text">Necesito un acompañante terapéutico para mi tio</p>
+                                    <p class="timestamp">10:35 AM</p>
+                                </div>
+                                <div class="message">
+                                    <p class="sender">Juan Doe</p>
+                                    <p class="text">Por supuesto, podria darme más detalles porfavor?</p>
+                                    <p class="timestamp">10:40 AM</p>
+                                </div>
+                            </div>
+                            <form class="message-form">
+                                <input type="text" placeholder="Agrega tu menasje aquí...">
+                                <button type="submit">Enviar</button>
+                            </form>
+                        </div>
+    </div>
+    <footer>
+        <p>Centro Educativo de Acompañantes</p>
+    </footer>
+    <script>
+        function showNumber(number) {
+            alert("Número del profesional " + number);
+        }
+    </script>
+</body>
+    </html>

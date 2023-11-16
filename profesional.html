@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/pro.css">
+</head>
+<body>
+    <header>
+        <h1>Home Cliente</h1>   
+        <nav>
+            <div class="navbar">
+                <span class="username">Rodri Cliente</span>
+                <a class="logout-button" href="index.html">Logout</a>
+            </div>
+        </nav>
+    </header>
+    <div id="chat">
+        <div id="messages"></div>
+        <form id="message-form">
+            <input type="text" id="message-input" placeholder="Type your message here...">
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+    <div id="profile">
+        <h2>Perfil</h2>
+        <form id="profile-form">
+            <label for="name-input">Nombre:</label>
+            <input type="text" id="name-input" name="name"><br>
+            <label for="email-input">Email:</label>
+            <input type="email" id="email-input" name="email"><br>
+            <label for="phone-input">Número:</label>
+            <input type="tel" id="phone-input" name="phone"><br>
+            <button type="submit">Guardar</button>
+        </form>
+    </div>
+    <footer>
+        <p>Centro Educativo de Acompañantes</p>
+    </footer>
+    <script>
+
+        let messages = JSON.parse(localStorage.getItem('messages')) || [];
+
+        const messagesDiv = document.getElementById('messages');
+        messages.forEach(message => {
+            const messageDiv = document.createElement('div');
+            messageDiv.textContent = message;
+            messagesDiv.appendChild(messageDiv);
+        });
+
+        const messageForm = document.getElementById('message-form');
+        const messageInput = document.getElementById('message-input');
+        messageForm.addEventListener('submit', event => {
+            event.preventDefault();
+            const message = messageInput.value;
+            messages.push(message);
+            localStorage.setItem('messages', JSON.stringify(messages));
+            const messageDiv = document.createElement('div');
+            messageDiv.textContent = message;
+            messagesDiv.appendChild(messageDiv);
+            messageInput.value = '';
+        });
+
+
+        let profile = JSON.parse(localStorage.getItem('profile')) || {};
+
+
+        const nameInput = document.getElementById('name-input');
+        const emailInput = document.getElementById('email-input');
+        const phoneInput = document.getElementById('phone-input');
+        nameInput.value = profile.name || '';
+        emailInput.value = profile.email || '';
+        phoneInput.value = profile.phone || '';
+
+
+        const profileForm = document.getElementById('profile-form');
+        profileForm.addEventListener('submit', event => {
+            event.preventDefault();
+            const name = nameInput.value;
+            const email = emailInput.value;
+            const phone = phoneInput.value;
+            profile = { name, email, phone };
+            localStorage.setItem('profile', JSON.stringify(profile));
+        });
+    </script>
+</body>
+</html>

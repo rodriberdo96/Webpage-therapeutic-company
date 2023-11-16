@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+}
+
+.username{
+    color: #fff;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-right: 20px;
+    padding: 10px 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+nav a:hover {
+    background-color: #063970;
+    color: rgb(255, 228, 228);
+}
+
+nav li:hover {
+    background-color: #e8e8e8;
+}
+
+.section {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #ccc;
+}
+
+.contact-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #ccc;
+    width: 300px;
+    height: 400px;
+}
+
+.contact-card h3 {
+    margin-top: 0;
+}
+
+.contact-card p {
+    margin: 0;
+}
+
+.contact-card .rating {
+    font-size: 16px;
+    color: #f0ad4e;
+}
+
+.contact-card .rating::before {
+    content: "\2605";
+}
+
+.contact-card .value-per-hour {
+    font-size: 16px;
+    color: #007bff;
+}
+
+.contact-card .contact-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-card .contact-button:hover {
+    background-color: #0069d9;
+}
+
+
+.professional-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+}
+
+
+h2 {
+    margin-top: 0;
+}
+
+h3 {
+    margin-top: 0;
+}
+
+
+.rating {
+    display: inline-block;
+    font-size: 16px;
+    color: #f0ad4e;
+}
+
+.rating::before {
+    content: "\2605";
+}
+
+
+.value-per-hour {
+    font-size: 16px;
+    color: #007bff;
+}
+
+.chat-container {
+    border: 1px solid #ccc;
+    padding: 10px;
+    height: 300px;
+    overflow-y: scroll;
+}
+.message {
+    margin-bottom: 10px;
+}
+.sender {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.text {
+    margin-bottom: 5px;
+}
+.timestamp {
+    font-size: 12px;
+    color: #999;
+}
+.message-form {
+    margin-top: 10px;
+}
+.message-form input[type="text"] {
+    width: 80%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-right: 5px;
+}
+.message-form button[type="submit"] {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+
+footer {
+    background-color:#007bff;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Media queries para mobile */
+@media only screen and (max-width: 600px) {
+
+    h2, h3 {
+        font-size: 24px;
+    }
+
+
+    .rating {
+        font-size: 12px;
+    }
+
+
+    .value-per-hour {
+        font-size: 12px;
+    }
+
+    .message-form input[type="text"] {
+        width: 70%;
+    }
+
+
+    .contact-card .contact-button {
+        margin: 0 auto;
+    }
+}
